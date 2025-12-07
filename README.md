@@ -8,7 +8,7 @@ View the live project here - https://job-anallyze.netlify.app/
 
 
 🎥 Video Demonstration
-Watch explainer video here - 
+Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e24c1a1e69
 
 
 
