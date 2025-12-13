@@ -2,7 +2,8 @@ import { useState } from "react";
 
 interface AnalysisType {
   match: string;
-  techStack: string[];
+  techSKill: string[];
+
   requirements: string[];
   suggestions: string[];
 }
@@ -11,24 +12,22 @@ function App() {
   const [text, setText] = useState("");
   const [analysis, setAnalysis] = useState<AnalysisType>({
     match: "",
-    techStack: [],
+    techSKill: [],
     requirements: [],
     suggestions: [],
   });
 
   const mySkills = [
-    "JavaScript",
-    "React",
-    "Git",
-    "TypeScript",
-    "CSS",
-    "Tailwind CSS",
+    "JavaScript", "React", "Git", "TypeScript", "CSS", "Tailwind CSS", "EHR", "Appointment Booking Software"
   ];
 
-  const techSkills = [ "React", "TypeScript", "JavaScript","Python","Java", "C#", "Go", "Node.js","Express","Next.js","Vue",
+  const techSkills = [ 
+    "React", "TypeScript", "JavaScript","Python","Java", "C#", "Go", "Node.js","Express","Next.js","Vue",
     "Angular", "Tailwind CSS", "CSS", "SCSS", "Bootstrap", "HTML", "MongoDB", "PostgreSQL", "MySQL", "AWS", "Docker",
     "Git", "REST", "GraphQL", "Redux", "Jest", "React Native", "Flutter", "Dart", "Swift", "Figma", "Vite", "REST API",
   ];
+
+
 
   const handleAnalyzeButton = () => {
     // if text is empty or has white space than return
@@ -39,21 +38,23 @@ function App() {
       text.toLowerCase().includes(skill.toLowerCase())
     );
 
+
+    const allRequireSkills = [...requireSkills]
+
     // look though for each skill in MySkills and pick one skill that has in the requireSkills
     const matchSkills = mySkills.filter((skill) =>
       requireSkills.includes(skill)
     );
 
-    // Calculate match percentage(my skills ÷ required skills) × 100
-    const matchPercent =
-      requireSkills.length > 0
-        ? Math.round((matchSkills.length / requireSkills.length) * 100)
-        : 0;
-
     // look though for each one skill in requireSKills and pick one skill that  don't have in the mySkills
     const missingSkills = requireSkills.filter(
       (skill) => !mySkills.includes(skill)
     );
+
+    const techMatch = requireSkills.length > 0 ? (matchSkills.length / requireSkills.length) * 100 : 0
+  
+
+    const totalMatch = Math.round(techMatch)
 
     // split it each sentence for each line, and Filter each line for keywords like "experience", "skill", etc.
     // and found the first 5 sentence that has those keyword
@@ -66,21 +67,30 @@ function App() {
           line.includes("skill") ||
           line.includes("require") ||
           line.includes("ability") ||
-          line.includes("qualification")
+          line.includes("qualification") ||
+          line.includes("Support") ||
+          line.includes("Test") ||
+          line.includes("functionality")
       )
       .slice(0, 5);
 
-    // if missSkill is more than 0 that will show the learning suggestion
-    // OR display "Great job! Focus on behavioral interview questions."
-    const suggestions =
-      missingSkills.length > 0
-        ? [`Focus on learning ${missingSkills.slice(0, 3).join(", ")}`]
-        : ["Great job! Focus on behavioral interview questions."];
+      // Suggestion
+    // start with empty, if more than 1 showing what skill u need to focus, if none display great match
+    const suggestions = []
+
+    if (missingSkills.length > 0) {
+      suggestions.push(`Technical: Focus on ${missingSkills.slice(0, 2).join(", ")}`)
+    }
+
+    if (missingSkills.length === 0) {
+      suggestions.push("Great match! Focus behavioral questions")
+    }
+      
 
     // Overall the Analysis state - match, techStack, requirement and suggestion
     setAnalysis({
-      match: matchPercent.toString(),
-      techStack: requireSkills,
+      match: totalMatch.toString(),
+      techSKill: allRequireSkills,
       requirements:
         requirements.length > 0
           ? requirements
@@ -94,7 +104,7 @@ function App() {
     setText("");
     setAnalysis({
       match: "",
-      techStack: [],
+      techSKill: [],
       requirements: [],
       suggestions: [],
     });
@@ -150,7 +160,7 @@ function App() {
 
         {text.length > 0 && (
           <div className="text-[16px] text-gray-500 mt-2">
-            {text.length} characters • ✂️ Paste your job description above
+            {text.length} characters • Paste your job description above
           </div>
         )}
       </div>
@@ -165,26 +175,26 @@ function App() {
             {/* Match Score */}
             <section>
               <div className="flex gap-2 items-center mb-2">
-                <h1 className=" text-gray-900 font-bold">Match:</h1>
+                <h1 className=" text-gray-900 font-bold">Role Suitability:</h1>
                 <p className="text-gray-700">{analysis.match}%</p>
               </div>
             </section>
 
-            {/* Tech Stack */}
+            {/* Tech Skill */}
             <section>
               <div className="flex gap-2 items-center mb-2">
-                <h1 className="text-gray-900 font-bold">Required Tech Stack:</h1>
+                <h1 className="text-gray-900 font-bold">Required Tech Skills:</h1>
                 <div className="flex flex-wrap gap-2">
-                  {analysis.techStack.length > 0 ? (
-                    analysis.techStack.map((skill, index) => {
+                  {analysis.techSKill.length > 0 ? (
+                    analysis.techSKill.map((skill, index) => {
                       const hasSkill = mySkills.includes(skill);
                       return (
                         <span
                           key={index}
                           className={`px-4 py-2 rounded-lg font-medium border ${
                             hasSkill
-                              ? "bg-gray-50 text-green-600 border-green-300"
-                              : "bg-red-100 text-red-800 border-red-300"
+                              ? "bg-white text-green-600 "
+                              : "bg-white text-red-800 "
                           }`}
                         >
                           {skill}
@@ -216,7 +226,11 @@ function App() {
             <section>
               <div className="flex gap-2 items-center">
                 <h1 className=" text-gray-900 font-bold mt-4">Study Suggestions:</h1>
-                <p className="text-gray-700 mt-4">{analysis.suggestions}</p>
+                
+                  {analysis.suggestions.map((suggestion, index) =>
+                    <p key={index} className="text-red-800 font-bold mt-4">{suggestion}</p>
+                  )}
+                
               </div>
             </section>
           </div>
