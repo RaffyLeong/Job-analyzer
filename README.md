@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Job Post Analyzer
+A simple yet powerful React application that helps job seekers quickly analyze job descriptions and see how well their skills match. Perfect for developers, career changers, and anyone looking to streamline their job search process.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Live Demo
+View the live project here - https://job-anallyze.netlify.app/
 
-Currently, two official plugins are available:
+<img width="1479" height="921" alt="Screenshot 2025-12-07 at 4 45 52 PM" src="https://github.com/user-attachments/assets/ec75dabc-417d-496e-b5e5-483e6aa29409" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+🎥 Video Demonstration
+Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e24c1a1e69
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧠 Why I Built This
+As a career-changer learning frontend development, I noticed that many developers and job seekers spend excessive time analyzing job descriptions manually. This tool was built to:
+- **Save time** by automating the analysis process
+- **Increase confidence** by showing exact skill matches
+- **Provide direction** with personalized learning suggestions
+- **Simplify job hunting** with a clean, focused interface
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+⚙️ How It Works
+1. **Copy** a job description from LinkedIn, Indeed, or any job board
+2. **Paste** it into the application
+3. **Click Analyze** to see instant results
+4. **Review** your match score, required skills, and personalized suggestions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🛠️ Tech Stack
+- React + TypeScript
+- Vite (or Create React App)
+- Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Deployment: Netlify
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🚧 Challenges & Learnings
+1. **Skill Detection Accuracy**: Ensuring the app correctly identifies technical skills from varied job description formats
+2. **State Management**: Handling multiple states for analysis results and UI updates
+3. **Edge Cases**: Dealing with job descriptions that don't mention specific technical skills
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+📁 Running Locally
+Clone the repo: https://github.com/RaffyLeong/Job-analyzer.git
+Install dependencies: npm install
+Run the dev server: npm run dev
+Open http://localhost:5173 in your browser.
