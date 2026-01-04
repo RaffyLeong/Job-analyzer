@@ -4,11 +4,11 @@ A simple yet powerful React application that helps job seekers quickly analyze j
 🚀 Live Demo
 View the live project here - https://job-anallyze.netlify.app/
 
-Before
+
 <img width="1808" height="925" alt="Screenshot 2026-01-04 at 11 03 48 PM" src="https://github.com/user-attachments/assets/90d7e447-e055-457e-acf1-047487f9693a" />
 <img width="1728" height="915" alt="Screenshot 2026-01-04 at 11 06 15 PM" src="https://github.com/user-attachments/assets/c7f34444-034c-41c1-8345-7f2734058288" />
 
-After
+
 <img width="1875" height="914" alt="Screenshot 2026-01-04 at 11 05 59 PM" src="https://github.com/user-attachments/assets/ac257467-ba4f-4bea-a7e1-49e71e76833d" />
 <img width="1602" height="913" alt="Screenshot 2026-01-04 at 11 04 56 PM" src="https://github.com/user-attachments/assets/d017803c-7e86-469a-9c98-b460f8228724" />
 
