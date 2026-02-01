@@ -1,8 +1,7 @@
 # Job Post Analyzer
 A React application that analyzes job descriptions against your profile with a 4-step workflow, providing detailed match percentages and actionable insights.
 
-[Live Demo](https://job-analyzer.netlify.app/)
-[Video Demo](https://www.loom.com/share/f7a196256af94299a33eedfcec368549)
+[Live Demo](https://job-analyzer.netlify.app/) | [Video Demo](https://www.loom.com/share/f7a196256af94299a33eedfcec368549)
 
 ---
 
