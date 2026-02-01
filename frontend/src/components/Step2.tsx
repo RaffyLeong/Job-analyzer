@@ -64,7 +64,7 @@ const Step2 = ({ profile, onUpdate }: Step2Prop) => {
       {/* Quick Select Categories */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 dark:text-white">
-          Common Frontend Skills
+          Common Skills
         </h3>
         
       </div>

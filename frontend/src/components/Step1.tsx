@@ -36,7 +36,7 @@ const Step1 = ({ profile, onUpdate }: Step1Props) => {
     <div>
       <h2 className="text-3xl font-bold text-blue-600 mb-2 dark:text-blue-500">Choose Your Role</h2>
       <p className="text-gray-500 mb-8 dark:text-white">
-        Select the role that best matches your current career stage
+        Select the job title you're interested in applying for
       </p>
       <div className="mt-6 flex items-center gap-2 mb-20">
         <div className="w-12 h-1 bg-blue-500 rounded-full"></div>
@@ -47,7 +47,7 @@ const Step1 = ({ profile, onUpdate }: Step1Props) => {
       {/* Role Selection */}
       <div className="mb-20">
         <h3 className="text-lg font-semibold text-gray-800 mb-4 dark:text-white">
-          What describes you best?
+          Select Your Target Role
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {ROLES.map((role) => (
