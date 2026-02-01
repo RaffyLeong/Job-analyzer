@@ -77,13 +77,13 @@ Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e2
 
 📁 Running Locally
 ### **Step-by-Step Setup**
-# 1. Clone repository
+## 1. Clone repository
 git clone https://github.com/RaffyLeong/Job-Analyzer.git
 cd Job-Analyzer
 
-# 2. Install frontend dependencies
+## 2. Install frontend dependencies
 cd frontend
 npm install
 
-# 3. Start development server
+## 3. Start development server
 npm run dev
