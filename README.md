@@ -41,28 +41,17 @@ Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e2
 
 ---
 
-## 🧠 **Technical Implementation**
-
-Total Match = (Skills × 0.5) + (Role × 0.25) + (Experience × 0.25)
-
-**1. SKILLS ANALYSIS (50%):
-   - Extract 60+ tech skills from job description
-   - Compare with user's selected skills
-   - Calculate: (matching skills / required skills) × 100
-
-**2. ROLE ANALYSIS (25%):
-   - Check exact role matches
-   - Map related keywords (Frontend → React Developer, UI Engineer)
-   - Score: 100% (exact), 75% (related), 25% (weak)
-
-**3. EXPERIENCE ANALYSIS (25%):
-   - Parse "X+ years experience" from job description
-   - Compare with user's experience level
-   - Calculate compatibility percentage
-
+## 🚀 **Running Locally**
 
 📁 Running Locally
-Clone the repo: https://github.com/RaffyLeong/Job-analyzer.git
-Install dependencies: npm install
-Run the dev server: npm run dev
-Open http://localhost:5173 in your browser.
+### **Step-by-Step Setup**
+# 1. Clone repository
+git clone https://github.com/RaffyLeong/Job-Analyzer.git
+cd Job-Analyzer
+
+# 2. Install frontend dependencies
+cd frontend
+npm install
+
+# 3. Start development server
+npm run dev
