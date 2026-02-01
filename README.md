@@ -15,7 +15,7 @@ Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e2
 <img width="1895" height="926" alt="Screenshot 2026-02-01 at 2 29 51 PM" src="https://github.com/user-attachments/assets/c4d95c82-e19c-4283-a27e-8a6564620369" />
 
 ### 1: Step 2: Skills Selection 
-<img width="1715" height="923" alt="Screenshot 2026-02-01 at 1 02 12 PM" src="https://github.com/user-attachments/assets/055b6b06-6484-4b8f-8122-86c4f85a4eda" />
+<img width="1902" height="925" alt="Screenshot 2026-02-01 at 2 31 13 PM" src="https://github.com/user-attachments/assets/9b5e4a9c-831e-4e77-ad7f-576083053403" />
 
 ### 1: Step 3: Job Description
 <img width="1798" height="924" alt="Screenshot 2026-02-01 at 1 02 53 PM" src="https://github.com/user-attachments/assets/b99833fd-f5e4-46df-92a2-659bb5d87919" />
