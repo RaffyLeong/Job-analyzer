@@ -12,7 +12,7 @@ Watch explainer video here - https://www.loom.com/share/b40ab271605e4345a2d303e2
 ## 📸 **Application Preview**
 
 ### Step 1: Role, Experience Selection 
-<img width="1860" height="916" alt="Screenshot 2026-02-01 at 1 01 51 PM" src="https://github.com/user-attachments/assets/603e73bc-b657-4a01-98f6-8b4a52a91734" />
+<img width="1895" height="926" alt="Screenshot 2026-02-01 at 2 29 51 PM" src="https://github.com/user-attachments/assets/c4d95c82-e19c-4283-a27e-8a6564620369" />
 
 ### 1: Step 2: Skills Selection 
 <img width="1715" height="923" alt="Screenshot 2026-02-01 at 1 02 12 PM" src="https://github.com/user-attachments/assets/055b6b06-6484-4b8f-8122-86c4f85a4eda" />
